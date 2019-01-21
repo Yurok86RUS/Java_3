@@ -39,6 +39,8 @@ public class MainClass {
         goTo.goToFruits(appleBox, newAppleBox);
         goTo.goToFruits(orangeBox, newOOrangeBox);
 
+        System.out.println();
+
         System.out.println("Старая коробка яблок теперь весит: " + appleBox.getWeight() + ", а новая весит: " + newAppleBox.getWeight());
         System.out.println("Старая коробка апельсинов теперь весит: " + orangeBox.getWeight() + ", а новая весит: " + newOOrangeBox.getWeight());
     }
