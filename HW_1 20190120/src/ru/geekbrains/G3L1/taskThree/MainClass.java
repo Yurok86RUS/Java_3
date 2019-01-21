@@ -1,7 +1,5 @@
 package ru.geekbrains.G3L1.taskThree;
 
-import java.security.BasicPermission;
-
 public class MainClass {
     public static void main(String[] args) {
         Apple a0 = new Apple();
@@ -25,10 +23,23 @@ public class MainClass {
         orangeBox.add(or0,or1,or2,or3,or4,or5,or6,or7);
 
         System.out.println("Коробка апельсинов весит: " + orangeBox.getWeight() + "кг.; коробка яблок весит: " + appleBox.getWeight() + "кг.");
+        System.out.println();
 
         if (appleBox.compare(orangeBox)) {
             System.out.println("вес коробок одинаков");
         }
         else System.out.println("коробки разные по весу");
+
+        System.out.println();
+
+        Box<Apple> newAppleBox = new Box<Apple>();
+        Box<Orange> newOOrangeBox = new Box<Orange>();
+
+        GoTo goTo = new GoTo();
+        goTo.goToFruits(appleBox, newAppleBox);
+        goTo.goToFruits(orangeBox, newOOrangeBox);
+
+        System.out.println("Старая коробка яблок теперь весит: " + appleBox.getWeight() + ", а новая весит: " + newAppleBox.getWeight());
+        System.out.println("Старая коробка апельсинов теперь весит: " + orangeBox.getWeight() + ", а новая весит: " + newOOrangeBox.getWeight());
     }
 }

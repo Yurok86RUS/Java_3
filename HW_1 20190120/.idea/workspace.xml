@@ -70,23 +70,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoTo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GoTo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/GoTo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="289">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state relative-caret-position="340">
+              <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding>
                 <element signature="e#588#595#0" expanded="true" />
                 <element signature="e#715#723#0" expanded="true" />
+                <element signature="e#1138#1145#0" expanded="true" />
+                <element signature="e#1192#1200#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,8 +114,8 @@
         <option value="$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/Orange.java" />
         <option value="$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/Box.java" />
         <option value="$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/Goto.java" />
-        <option value="$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/GoTo.java" />
         <option value="$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/MainClass.java" />
+        <option value="$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/GoTo.java" />
       </list>
     </option>
   </component>
@@ -293,18 +295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/Fruit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#130#131#0" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/Apple.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -332,10 +322,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/GoTo.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="340">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding>
+            <element signature="e#588#595#0" expanded="true" />
+            <element signature="e#715#723#0" expanded="true" />
+            <element signature="e#1138#1145#0" expanded="true" />
+            <element signature="e#1192#1200#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -350,14 +346,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/MainClass.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/Fruit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="e#588#595#0" expanded="true" />
-            <element signature="e#715#723#0" expanded="true" />
+            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/geekbrains/G3L1/taskThree/GoTo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
         </state>
       </provider>
     </entry>

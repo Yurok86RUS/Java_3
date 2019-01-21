@@ -6,9 +6,10 @@ public class GoTo {
         while (from.getWeight() !=0){
             T fruits;
             fruits = from.get();
-            System.out.println("переложили");
             to.add(fruits);
         }
+
+        System.out.println("переложили  из коробки в коробку");
     }
 
 }
