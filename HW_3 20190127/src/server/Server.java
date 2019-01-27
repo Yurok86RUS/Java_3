@@ -41,32 +41,41 @@ public class Server {
         }
     }
 
-    public void broadcastMsg(String msg, String sendler) {
+    public void broadcastMsg(String msg, String sendler) throws IOException {
         for (ClientHandler o : clients) {
             o.sendMsg(sendler + " пишет: " + msg);
             String nickToWrite = o.getClient(o);
-            o.writeLog(nickToWrite,msg);
+            o.writeLog(nickToWrite,sendler + " пишет: " + msg);
         }
     }
 
-    public void goodby(String msg, String sendler) {
+    public void goodby(String msg, String sendler) throws IOException{
         for (ClientHandler o : clients) {
             o.sendMsg(sendler + " " + msg);
             String nickToWrite = o.getClient(o);
-            o.writeLog(nickToWrite,msg);
+            o.writeLog(nickToWrite,sendler + " " + msg);
         }
     }
 
-    public void sendToNick (String msg, String nickName, String sendler){
+    public void sendToNick (String msg, String nickName, String sendler) throws IOException{
         for (ClientHandler o : clients){
             String tmp = o.getClient(o);
             if (tmp.equals(sendler)) {
                 o.sendMsg(sendler + " пишет для " + nickName + " : " + msg);
-                o.writeLog(sendler,msg);
+                o.writeLog(sendler,sendler + " пишет для " + nickName + " : " + msg);
             }
             if (tmp.equals(nickName)) {
                 o.sendMsg(sendler + " пишет для " + nickName + " : " + msg);
-                o.writeLog(nickName,msg);
+                o.writeLog(nickName,sendler + " пишет для " + nickName + " : " + msg);
+            }
+        }
+    }
+
+    public void loadingToNick (String msg, String nickName){
+        for (ClientHandler o : clients){
+            String tmp = o.getClient(o);
+            if (tmp.equals(nickName)){
+                o.sendMsg(msg);
             }
         }
     }

@@ -1,7 +1,10 @@
 package server;
 
+import client.Controller;
+
 import java.io.*;
 import java.net.Socket;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
@@ -55,9 +58,13 @@ public class ClientHandler {
                                             outputStream.write(b);
                                         }
                                         byte[] barr = outputStream.toByteArray();
-                                        String s = new String (barr);
-                                        System.out.println(s);
+                                        String s = new String(barr);
+//                                        byte[] arr = Arrays.copyOfRange(barr, barr.length-100,barr.length);
+//                                        String s = new String (arr);
+                                        server.loadingToNick(s,nick);
                                      fileInputStream.close();
+                                     outputStream.close();
+                                     sequenceInputStream.close();
                                     }
                                     break;
                                 } else {
@@ -123,9 +130,11 @@ public class ClientHandler {
         return listClients.get(qwe);
     }
 
-    public void writeLog(String nickToWrite, String msg){
+    public void writeLog(String nickToWrite, String msg) throws IOException{
         //открыть файл и записать туда сообщение
-
+    DataOutputStream outputStream = new DataOutputStream(new FileOutputStream(nickToWrite + ".txt",true));
+    outputStream.writeUTF(msg + "\n");
+    outputStream.close();
     }
 
 }
