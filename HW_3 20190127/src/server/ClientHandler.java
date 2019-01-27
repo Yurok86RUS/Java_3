@@ -70,11 +70,11 @@ public class ClientHandler {
                             String str = in.readUTF();
                             String sender = getClient(ClientHandler.this);
                             if (str.equals("/end")) {
+                                server.goodby(" вышел из чата", sender);
                                 out.writeUTF("/serverclosed");
                                 break;
                             }
                             if (str.startsWith("/w")) {
-                                //String sender = getClient(ClientHandler.this);
                                 String[] parsingNick = str.split(" ", 3);
                                 String toNick = parsingNick[1];
                                 String newStr = parsingNick[2];

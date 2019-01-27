@@ -49,6 +49,13 @@ public class Server {
         }
     }
 
+    public void goodby(String msg, String sendler) {
+        for (ClientHandler o : clients) {
+            o.sendMsg(sendler + " " + msg);
+            o.writeLog(msg);
+        }
+    }
+
     public void sendToNick (String msg, String nickName, String sendler){
         for (ClientHandler o : clients){
             String tmp = o.getClient(o);
