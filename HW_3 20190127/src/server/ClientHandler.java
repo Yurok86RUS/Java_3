@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Vector;
 
 public class ClientHandler {
 
@@ -52,6 +53,17 @@ public class ClientHandler {
                                      //for (byte b23 : barr){
                                      //    System.out.println(b23);
                                      //}
+                                        Vector<InputStream> loadingLog = new Vector<>();
+                                        loadingLog.add(fileInputStream);
+                                        SequenceInputStream sequenceInputStream = new SequenceInputStream(loadingLog.elements());
+                                        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                                        int b;
+                                        while ((b = sequenceInputStream.read()) != -1){
+                                            outputStream.write(b);
+                                        }
+                                        byte[] barr = outputStream.toByteArray();
+                                        String s = new String (barr);
+                                        System.out.println(s);
                                      fileInputStream.close();
                                     }
                                     break;
