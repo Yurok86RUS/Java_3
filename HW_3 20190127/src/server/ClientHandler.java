@@ -42,17 +42,10 @@ public class ClientHandler {
                                     //тут надо читать логфайл с именем nick или создавать если его нет
                                     File log = new File(nick + ".txt");
                                     if (!log.exists()) {
-                                       // byte[] b = {0,1,2,3,4,5,6,7,8,9};
                                         FileOutputStream fileOutputStream = new FileOutputStream(nick + ".txt");
-                                        //fileOutputStream.write(b);
                                         fileOutputStream.close();
                                     } else {
                                      FileInputStream fileInputStream = new FileInputStream(nick + ".txt");
-                                     //byte[] barr = new byte[15];
-                                     //fileInputStream.read(barr);
-                                     //for (byte b23 : barr){
-                                     //    System.out.println(b23);
-                                     //}
                                         Vector<InputStream> loadingLog = new Vector<>();
                                         loadingLog.add(fileInputStream);
                                         SequenceInputStream sequenceInputStream = new SequenceInputStream(loadingLog.elements());
@@ -127,6 +120,11 @@ public class ClientHandler {
 
     public String getClient (ClientHandler qwe){
         return listClients.get(qwe);
+    }
+
+    public void writeLog(String msg){
+        //открыть файл и записать туда сообщение
+
     }
 
 }

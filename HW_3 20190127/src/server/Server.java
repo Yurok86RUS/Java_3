@@ -44,17 +44,22 @@ public class Server {
 
     public void broadcastMsg(String msg) {
         for (ClientHandler o : clients) {
+
             o.sendMsg(msg);
+            o.writeLog(msg);
         }
     }
 
     public void sendToNick (String msg, String nickName, String sendler){
         for (ClientHandler o : clients){
-            //System.out.println("значение о из метода гет клиент " + o.getClient(o));
             String tmp = o.getClient(o);
-            //System.out.println("сравниваем " + tmp + " и " + nickName);
+            if (tmp.equals(sendler)) {
+                o.sendMsg(sendler + " пишет " + nickName + " : " + msg);
+                o.writeLog(msg);
+            }
             if (tmp.equals(nickName)) {
-                o.sendMsg("личное от "+ sendler + " : " + msg);
+                o.sendMsg(sendler + " пишет " + nickName + " : " + msg);
+                o.writeLog(msg);
             }
         }
     }
