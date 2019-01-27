@@ -1,8 +1,6 @@
 package server;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +14,7 @@ public class ClientHandler {
     private String nick;
 
     private HashMap<ClientHandler, String> listClients = new HashMap<>();
+    //private File log  = new File("");
 
 
     public ClientHandler(Server server, Socket socket) {
@@ -40,6 +39,13 @@ public class ClientHandler {
                                     nick = newNick;
                                     server.subscribe(ClientHandler.this);
                                     listClients.put(ClientHandler.this,nick);
+
+                                    //тут надо читать логфайл с именем nick или создавать если его нет
+                                    File log = new File(nick + ".txt");
+                                    System.out.println(log.exists());
+                                    if (!log.exists()) {
+                                        FileOutputStream fileOutputStream = new FileOutputStream(nick + ".txt");
+                                    }
                                     break;
                                 } else {
                                     sendMsg("Неверный логин/пароль");
@@ -58,8 +64,6 @@ public class ClientHandler {
                                 String[] parsingNick = str.split(" ", 3);
                                 String toNick = parsingNick[1];
                                 String newStr = parsingNick[2];
-                                //String[] delSymbol = str.split(" ", 3);
-                                //String newStr = delSymbol[2];
                                 server.sendToNick(newStr,toNick, sender);
                             } else {
                                 server.broadcastMsg(str);
