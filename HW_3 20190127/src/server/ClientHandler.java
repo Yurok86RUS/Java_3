@@ -14,8 +14,6 @@ public class ClientHandler {
     private String nick;
 
     private HashMap<ClientHandler, String> listClients = new HashMap<>();
-    //private File log  = new File("");
-
 
     public ClientHandler(Server server, Socket socket) {
         try {
@@ -42,9 +40,19 @@ public class ClientHandler {
 
                                     //тут надо читать логфайл с именем nick или создавать если его нет
                                     File log = new File(nick + ".txt");
-                                    System.out.println(log.exists());
                                     if (!log.exists()) {
+                                       // byte[] b = {0,1,2,3,4,5,6,7,8,9};
                                         FileOutputStream fileOutputStream = new FileOutputStream(nick + ".txt");
+                                        //fileOutputStream.write(b);
+                                        fileOutputStream.close();
+                                    } else {
+                                     FileInputStream fileInputStream = new FileInputStream(nick + ".txt");
+                                     //byte[] barr = new byte[15];
+                                     //fileInputStream.read(barr);
+                                     //for (byte b23 : barr){
+                                     //    System.out.println(b23);
+                                     //}
+                                     fileInputStream.close();
                                     }
                                     break;
                                 } else {
@@ -87,6 +95,7 @@ public class ClientHandler {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
+
                         server.unsubscribe(ClientHandler.this);
                     }
                 }
@@ -105,10 +114,6 @@ public class ClientHandler {
     }
 
     public String getClient (ClientHandler qwe){
-//        System.out.println("тут мы пошли в хэшмапу и там: ");
-//        for (Map.Entry<ClientHandler, String> hm : listClients.entrySet()){
-//            System.out.println("key " + hm.getKey() + " ; value " + hm.getValue());
-//        }
         return listClients.get(qwe);
     }
 

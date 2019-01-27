@@ -50,9 +50,9 @@ public class Server {
 
     public void sendToNick (String msg, String nickName, String sendler){
         for (ClientHandler o : clients){
-            System.out.println("значение о из метода гет клиент " + o.getClient(o));
+            //System.out.println("значение о из метода гет клиент " + o.getClient(o));
             String tmp = o.getClient(o);
-            System.out.println("сравниваем " + tmp + " и " + nickName);
+            //System.out.println("сравниваем " + tmp + " и " + nickName);
             if (tmp.equals(nickName)) {
                 o.sendMsg("личное от "+ sendler + " : " + msg);
             }
