@@ -123,7 +123,7 @@ public class ClientHandler {
         return listClients.get(qwe);
     }
 
-    public void writeLog(String msg){
+    public void writeLog(String nickToWrite, String msg){
         //открыть файл и записать туда сообщение
 
     }

@@ -21,7 +21,6 @@ public class Server {
             while (true) {
                 socket = server.accept();
                 System.out.println("Клиент подключился");
-//                clients.add(new ClientHandler(this, socket));
                 new ClientHandler(this, socket);
             }
 
@@ -45,14 +44,16 @@ public class Server {
     public void broadcastMsg(String msg, String sendler) {
         for (ClientHandler o : clients) {
             o.sendMsg(sendler + " пишет: " + msg);
-            o.writeLog(msg);
+            String nickToWrite = o.getClient(o);
+            o.writeLog(nickToWrite,msg);
         }
     }
 
     public void goodby(String msg, String sendler) {
         for (ClientHandler o : clients) {
             o.sendMsg(sendler + " " + msg);
-            o.writeLog(msg);
+            String nickToWrite = o.getClient(o);
+            o.writeLog(nickToWrite,msg);
         }
     }
 
@@ -61,11 +62,11 @@ public class Server {
             String tmp = o.getClient(o);
             if (tmp.equals(sendler)) {
                 o.sendMsg(sendler + " пишет для " + nickName + " : " + msg);
-                o.writeLog(msg);
+                o.writeLog(sendler,msg);
             }
             if (tmp.equals(nickName)) {
                 o.sendMsg(sendler + " пишет для " + nickName + " : " + msg);
-                o.writeLog(msg);
+                o.writeLog(nickName,msg);
             }
         }
     }
