@@ -42,10 +42,9 @@ public class Server {
         }
     }
 
-    public void broadcastMsg(String msg) {
+    public void broadcastMsg(String msg, String sendler) {
         for (ClientHandler o : clients) {
-
-            o.sendMsg(msg);
+            o.sendMsg(sendler + " пишет: " + msg);
             o.writeLog(msg);
         }
     }
@@ -54,11 +53,11 @@ public class Server {
         for (ClientHandler o : clients){
             String tmp = o.getClient(o);
             if (tmp.equals(sendler)) {
-                o.sendMsg(sendler + " пишет " + nickName + " : " + msg);
+                o.sendMsg(sendler + " пишет для " + nickName + " : " + msg);
                 o.writeLog(msg);
             }
             if (tmp.equals(nickName)) {
-                o.sendMsg(sendler + " пишет " + nickName + " : " + msg);
+                o.sendMsg(sendler + " пишет для " + nickName + " : " + msg);
                 o.writeLog(msg);
             }
         }

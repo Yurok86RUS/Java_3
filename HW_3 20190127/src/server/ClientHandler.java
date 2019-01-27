@@ -68,18 +68,19 @@ public class ClientHandler {
                         //рабочий цикл
                         while (true) {
                             String str = in.readUTF();
+                            String sender = getClient(ClientHandler.this);
                             if (str.equals("/end")) {
                                 out.writeUTF("/serverclosed");
                                 break;
                             }
                             if (str.startsWith("/w")) {
-                                String sender = getClient(ClientHandler.this);
+                                //String sender = getClient(ClientHandler.this);
                                 String[] parsingNick = str.split(" ", 3);
                                 String toNick = parsingNick[1];
                                 String newStr = parsingNick[2];
                                 server.sendToNick(newStr,toNick, sender);
                             } else {
-                                server.broadcastMsg(str);
+                                server.broadcastMsg(str, sender);
                             }
                         }
                     } catch (IOException e) {
