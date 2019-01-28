@@ -51,12 +51,12 @@ public class ClientHandler {
 
                                     BufferedReader reader = new BufferedReader(new FileReader(nick + ".txt"));
                                     String s;
+
                                     while ((s = reader.readLine()) != null){
                                         server.loadingToNick(s, nick);
                                         }
-                                    reader.close();
                                     }
-                                    
+
                                     break;
                                 } else {
                                     sendMsg("Неверный логин/пароль");
@@ -120,13 +120,6 @@ public class ClientHandler {
     public String getClient (ClientHandler qwe){
         return listClients.get(qwe);
     }
-
-//    public void writeLog(String nickToWrite, String msg) throws IOException{
-//        //открыть файл и записать туда сообщение
-//    DataOutputStream outputStream = new DataOutputStream(new FileOutputStream(nickToWrite + ".txt",true));
-//    outputStream.writeUTF(msg + "\n");
-//    outputStream.close();
-//    }
 
     public void writeLog(String nickToWrite, String msg) throws IOException{
         //открыть файл и записать туда сообщение
