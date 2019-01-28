@@ -48,24 +48,15 @@ public class ClientHandler {
                                         FileOutputStream fileOutputStream = new FileOutputStream(nick + ".txt");
                                         fileOutputStream.close();
                                     } else {
-                                     FileInputStream fileInputStream = new FileInputStream(nick + ".txt");
-                                        Vector<InputStream> loadingLog = new Vector<>();
-                                        loadingLog.add(fileInputStream);
-                                        SequenceInputStream sequenceInputStream = new SequenceInputStream(loadingLog.elements());
-                                        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-                                        int b;
-                                        while ((b = sequenceInputStream.read()) != -1){
-                                            outputStream.write(b);
+
+                                    BufferedReader reader = new BufferedReader(new FileReader(nick + ".txt"));
+                                    String s;
+                                    while ((s = reader.readLine()) != null){
+                                        server.loadingToNick(s, nick);
                                         }
-                                        byte[] barr = outputStream.toByteArray();
-                                        String s = new String(barr);
-//                                        byte[] arr = Arrays.copyOfRange(barr, barr.length-100,barr.length);
-//                                        String s = new String (arr);
-                                        server.loadingToNick(s,nick);
-                                     fileInputStream.close();
-                                     outputStream.close();
-                                     sequenceInputStream.close();
+                                    reader.close();
                                     }
+                                    
                                     break;
                                 } else {
                                     sendMsg("Неверный логин/пароль");
@@ -130,11 +121,19 @@ public class ClientHandler {
         return listClients.get(qwe);
     }
 
+//    public void writeLog(String nickToWrite, String msg) throws IOException{
+//        //открыть файл и записать туда сообщение
+//    DataOutputStream outputStream = new DataOutputStream(new FileOutputStream(nickToWrite + ".txt",true));
+//    outputStream.writeUTF(msg + "\n");
+//    outputStream.close();
+//    }
+
     public void writeLog(String nickToWrite, String msg) throws IOException{
         //открыть файл и записать туда сообщение
-    DataOutputStream outputStream = new DataOutputStream(new FileOutputStream(nickToWrite + ".txt",true));
-    outputStream.writeUTF(msg + "\n");
-    outputStream.close();
+    BufferedWriter writer = new BufferedWriter(new FileWriter((nickToWrite + ".txt"),true));
+    writer.write(msg);
+    writer.newLine();
+    writer.close();
     }
 
 }
