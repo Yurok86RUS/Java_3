@@ -10,42 +10,68 @@ public class Task1 {
     }
 
     public static class WaitNotify {
-        private final Object monitor = new Object(); // sync
+        private final Object sync1 = new Object();
+        private final Object sync2 = new Object();
         private volatile char currentLetter = 'A';
 
         void printA() {
-            synchronized (monitor) {
-                try {
-                    for (int i = 0; i < 5; i++) {
-                        while (currentLetter != 'A') {
-                            monitor.wait();
+            synchronized (sync1) {
+                synchronized (sync2) {
+                    try {
+                        for (int i = 0; i < 5; i++) {
+                            while (currentLetter != 'A') {
+                                if (currentLetter == 'B') {
+                                    sync1.wait();
+                                }
+                                if (currentLetter == 'C'){
+                                    sync2.wait();
+                                }
+                            }
+                            System.out.print("A");
+                            currentLetter = 'B';
+                            sync1.notify();
+                            sync2.notify();
                         }
-                        System.out.print("A");
-                        currentLetter = 'B';
-                        monitor.notify();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
             }
         }
 
         void printB() {
-            synchronized (monitor) {
-                try {
-                    for (int i = 0; i < 5; i++) {
-                        if (currentLetter != 'B') {
-                            monitor.wait();
+            synchronized (sync1) {
+                    try {
+                        for (int i = 0; i < 5; i++) {
+                            if (currentLetter != 'B') {
+                                sync1.wait();
+                            }
+                            System.out.print("B");
+                            currentLetter = 'C';
+                            sync1.notify();
                         }
-                        System.out.print("B");
-                        currentLetter = 'A';
-                        monitor.notify();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
             }
         }
+
+        void printC() {
+            synchronized (sync2) {
+                    try {
+                        for (int i = 0; i < 5; i++) {
+                            if (currentLetter != 'C') {
+                                sync2.wait();
+                            }
+                            System.out.print("C");
+                            currentLetter = 'A';
+                            sync2.notify();
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
 
         void start() throws InterruptedException {
             Thread t1 = new Thread(new Runnable() {
@@ -60,10 +86,18 @@ public class Task1 {
                     printB();
                 }
             });
+            Thread t3 = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    printC();
+                }
+            });
             t1.start();
             t2.start();
+            t3.start();
             t1.join();
             t2.join();
+            t3.join();
         }
 
     }
