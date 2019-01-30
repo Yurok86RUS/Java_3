@@ -8,6 +8,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ClientHandler {
 
@@ -20,15 +23,25 @@ public class ClientHandler {
     private HashMap<ClientHandler, String> listClients = new HashMap<>();
 
     public ClientHandler(Server server, Socket socket) {
+
         try {
             this.socket = socket;
             this.server = server;
             this.in = new DataInputStream(socket.getInputStream());
             this.out = new DataOutputStream(socket.getOutputStream());
 
-            new Thread(new Runnable() {
+            ExecutorService executorService = Executors.newSingleThreadExecutor();
+            executorService.execute(new Runnable() {
                 @Override
                 public void run() {
+//
+//                }
+//            });
+//
+//
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
                     try {
                         //цикл авторизации
                         while (true) {
@@ -103,7 +116,8 @@ public class ClientHandler {
                         server.unsubscribe(ClientHandler.this);
                     }
                 }
-            }).start();
+            });//.start();
+            executorService.shutdown();
         } catch (IOException e) {
             e.printStackTrace();
         }
