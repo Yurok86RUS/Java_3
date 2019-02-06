@@ -23,4 +23,13 @@ class Task3Test {
         boolean res = task3.check(in);
         assertEquals(res,false,"Error task3");
     }
+
+    @Test
+    void check2() {
+        int[] in = {0,0,0,0,0,0,0,0,1};
+        Task3 task3 =new Task3();
+        boolean res = task3.check(in);
+        assertEquals(res,true,"Error task3");
+    }
+
 }

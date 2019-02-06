@@ -10,6 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Task2Test {
 
+//**************************************
+//    оказалось не все так просто. @CsvSource не конвертирует данные в массив автоматически. Нужно написать собственный конвертер
+// *************************************
+
 //    @ParameterizedTest
 //    @CsvSource({"1,2,3,4,5,6,7,8,9,0", "5,6,7,8,9,0"})
 //
@@ -38,7 +42,7 @@ class Task2Test {
         int[] res = task2.arr(in);
         assertEquals(Arrays.toString(res),Arrays.toString(result),"Error task2");
     }
-//
+
     @Test
     void arr3() {
         Task2 task2 =new Task2();
