@@ -39,17 +39,20 @@
       <file leaf-file-name="Task2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Task2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state>
+              <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task2Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Task2Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/yur0k/lesson6/Task2Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+            <state relative-caret-position="227">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,8 +60,17 @@
       <file leaf-file-name="Task3.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Task3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="34">
+              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task3Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/yur0k/lesson6/Task3Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -80,9 +92,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Task3.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/yur0k/lesson6/Task3Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Task2.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/yur0k/lesson6/Task2Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/yur0k/lesson6/Task3Test.java" />
       </list>
     </option>
   </component>
@@ -211,22 +223,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Task2Test.arr (2)">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.yur0k.lesson6.Main" />
-      <module name="HW_6 20190205" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.yur0k.lesson6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="JUnit.Task3Test">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="Task2Test.arr (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW_6 20190205" />
       <extension name="coverage">
         <pattern>
@@ -238,8 +239,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ru.yur0k.lesson6" />
       <option name="MAIN_CLASS_NAME" value="ru.yur0k.lesson6.Task2Test" />
-      <option name="METHOD_NAME" value="arr" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -249,7 +250,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="Task2Test.arr (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task2Test.arr2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW_6 20190205" />
       <extension name="coverage">
         <pattern>
@@ -261,7 +262,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ru.yur0k.lesson6" />
       <option name="MAIN_CLASS_NAME" value="ru.yur0k.lesson6.Task2Test" />
-      <option name="METHOD_NAME" value="arr([int,[int)" />
+      <option name="METHOD_NAME" value="arr2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -272,30 +273,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="Task2Test.arr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HW_6 20190205" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.yur0k.lesson6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ru.yur0k.lesson6" />
-      <option name="MAIN_CLASS_NAME" value="ru.yur0k.lesson6.Task2Test" />
-      <option name="METHOD_NAME" value="arr([int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="Task3Test.testCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Task3Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HW_6 20190205" />
       <extension name="coverage">
         <pattern>
@@ -307,7 +285,53 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ru.yur0k.lesson6" />
       <option name="MAIN_CLASS_NAME" value="ru.yur0k.lesson6.Task3Test" />
-      <option name="METHOD_NAME" value="testCheck([int)" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="Task3Test.check" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW_6 20190205" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.yur0k.lesson6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ru.yur0k.lesson6" />
+      <option name="MAIN_CLASS_NAME" value="ru.yur0k.lesson6.Task3Test" />
+      <option name="METHOD_NAME" value="check" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="Task3Test.check1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW_6 20190205" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.yur0k.lesson6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ru.yur0k.lesson6" />
+      <option name="MAIN_CLASS_NAME" value="ru.yur0k.lesson6.Task3Test" />
+      <option name="METHOD_NAME" value="check1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -357,19 +381,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.Task3Test.testCheck" />
-      <item itemvalue="JUnit.Task2Test.arr" />
-      <item itemvalue="JUnit.Task2Test.arr (1)" />
-      <item itemvalue="JUnit.Task2Test.arr (2)" />
+      <item itemvalue="JUnit.Task2Test.arr2" />
+      <item itemvalue="JUnit.Task2Test" />
+      <item itemvalue="JUnit.Task3Test.check" />
+      <item itemvalue="JUnit.Task3Test.check1" />
+      <item itemvalue="JUnit.Task3Test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Task2Test.arr (2)" />
-        <item itemvalue="JUnit.Task2Test.arr (1)" />
-        <item itemvalue="JUnit.Task2Test.arr" />
-        <item itemvalue="JUnit.Task3Test.testCheck" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.Task3Test" />
+        <item itemvalue="JUnit.Task3Test.check1" />
+        <item itemvalue="JUnit.Task3Test.check" />
+        <item itemvalue="JUnit.Task2Test" />
+        <item itemvalue="JUnit.Task2Test.arr2" />
       </list>
     </recent_temporary>
   </component>
@@ -387,35 +411,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Task2Test_arr_(1) - 2019.02.06 at 01h 04m 13s.xml">
-      <configuration name="Task2Test.arr (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task2Test_arr_(1) - 2019.02.06 at 01h 09m 57s.xml">
-      <configuration name="Task2Test.arr (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task2Test_arr_(2) - 2019.02.06 at 11h 01m 08s.xml">
-      <configuration name="Task2Test.arr (2)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task2Test_arr_(2) - 2019.02.06 at 11h 01m 44s.xml">
-      <configuration name="Task2Test.arr (2)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task2Test_arr_(2) - 2019.02.06 at 11h 02m 11s.xml">
-      <configuration name="Task2Test.arr (2)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task2Test_arr_(2) - 2019.02.06 at 11h 02m 18s.xml">
-      <configuration name="Task2Test.arr (2)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task2Test_arr_(2) - 2019.02.06 at 11h 04m 05s.xml">
-      <configuration name="Task2Test.arr (2)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Task2Test_arr_(2) - 2019.02.06 at 11h 07m 02s.xml">
-      <configuration name="Task2Test.arr (2)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Task2Test_arr_(2) - 2019.02.06 at 11h 09m 39s.xml">
       <configuration name="Task2Test.arr (2)" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Task2Test_arr_(2) - 2019.02.06 at 11h 12m 08s.xml">
       <configuration name="Task2Test.arr (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task2Test_arr1 - 2019.02.06 at 14h 51m 56s.xml">
+      <configuration name="Task2Test.arr1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task2Test_arr1 - 2019.02.06 at 14h 52m 48s.xml">
+      <configuration name="Task2Test.arr1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task2Test_arr2 - 2019.02.06 at 14h 53m 20s.xml">
+      <configuration name="Task2Test.arr2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task2Test - 2019.02.06 at 16h 12m 06s.xml">
+      <configuration name="Task2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task2Test - 2019.02.06 at 16h 12m 21s.xml">
+      <configuration name="Task2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task3Test_check - 2019.02.06 at 16h 14m 10s.xml">
+      <configuration name="Task3Test.check" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task3Test_check1 - 2019.02.06 at 16h 15m 10s.xml">
+      <configuration name="Task3Test.check1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Task3Test - 2019.02.06 at 16h 15m 29s.xml">
+      <configuration name="Task3Test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -431,7 +455,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32882273" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32969153" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32882273" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32882273" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -484,7 +508,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -524,6 +548,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -577,7 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/yur0k/lesson6/Task3Test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -585,24 +611,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Task3.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Task2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Task2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/yur0k/lesson6/Task3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        <state relative-caret-position="34">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/yur0k/lesson6/Task2Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        <state relative-caret-position="227">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/yur0k/lesson6/Task3Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

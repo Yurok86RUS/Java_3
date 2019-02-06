@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Task2 {
 
-    public int[] arr (int[] array){
+    public int[] arr (int[] array) throws RuntimeException {
         boolean f = false;
         int start = 0;
         for (int i = 0; i <array.length; i++) {
@@ -14,7 +14,7 @@ public class Task2 {
             }
         }
         if (!f){
-            throw new RuntimeException();
+            new RuntimeException();
         }
         int[] arrays = Arrays.copyOfRange(array,start,array.length);
         return arrays;
