@@ -39,13 +39,10 @@ class Task2Test {
         assertEquals(Arrays.toString(res),Arrays.toString(result),"Error task2");
     }
 //
-//    @Test
-//    void arr3() {
-//        int[] in = {1,2,3,5,6,7,8,9,0};
-//        //int[] result = {5,6,7,8,9,0};
-//        Task2 task2 =new Task2();
-//        int[] res = task2.arr(in);
-//        //assertEquals(Arrays.toString(res),Arrays.toString(result),"Error task2");
-//        assertThrows(RuntimeException.class,res,"qwe");
-//    }
+    @Test
+    void arr3() {
+        Task2 task2 =new Task2();
+        assertThrows(RuntimeException.class,
+                () -> task2.contain(new int[]{2,3,5}));
+    }
 }
