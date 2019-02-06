@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Task2 {
 
-    public static int[] arr (int[] array){
+    public int[] arr (int[] array){
         boolean f = false;
         int start = 0;
         for (int i = 0; i <array.length; i++) {

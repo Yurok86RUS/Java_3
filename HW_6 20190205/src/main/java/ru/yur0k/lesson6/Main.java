@@ -12,11 +12,13 @@ public class Main {
     }
 
     private static void task2(int[] arrIn) {
-        System.out.println(Arrays.toString(Task2.arr(arrIn)));
+        Task2 task2 = new Task2();
+        System.out.println(Arrays.toString(task2.arr(arrIn)));
     }
 
     private static void task3(int[] arrIn){
-        System.out.println(Task3.check(arrIn));
+        Task3 task3 = new Task3();
+        System.out.println(task3.check(arrIn));
     }
 
 }
